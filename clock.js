@@ -37,3 +37,22 @@ function show()
   if (document.querySelector(".in-body").id === "hide-clock")  document.querySelector(".in-body").id = "show-clock";
   else if (document.querySelector(".in-body").id === "show-clock")   document.querySelector(".in-body").id = "hide-clock";
 }
+
+function showClock()
+{
+    if (document.querySelector(".in-body").id === "hide-clock")  
+    {
+      document.querySelector(".in-body").id = "show-clock";
+      $("#stop-watch").toggleClass("hide");
+    }
+}
+
+function showStopWatch()
+{
+  let cl = document.querySelector("#stop-watch").classList;
+  if(cl.length != 0)
+  {
+    cl.remove("hide");
+    document.querySelector(".in-body").id = "hide-clock";
+  }
+}
