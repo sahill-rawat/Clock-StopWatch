@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./Images/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stopwatch.css">
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+
+    <div id="preloader">
+        <img src="./preloader/yy3.gif" alt="preloader">
+    </div>
+
+    <nav class="navbar navbar-light bg-light flex">
+        <form class="container-fluid d-flex justify-content-center width b-g-w">
+            <a class="btn btn-outline-success me-2" onclick="show()" role="button">Clock</a>
+            <a class="btn btn-outline-success me-2" onclick="show()" role="button">StopWatch</a>
+        </form>
+      </nav>
+
+    <div class="container d-flex justify-content-center width">
+        <a onclick="show()"><img class="down-icon" src="./Images/double-down.png" alt=""></a>
+    </div>
+
+
+    <div id="stop-watch" style="background: url(./Images/bg.jfif);">
+        <div id="set-timer" class="container set-timer-dim f-s-2rem border-white border-rad-30px">
+            <div class="row btns m-t-10px">
+                <div id="btn1minus" class="col-4">-</div>
+                <div id="btn2minus" class="col-4">-</div>
+                <div id="btn3minus" class="col-4">-</div>
+            </div>
+
+            <div class="row blur">
+                <div id="hrs" class="col-4 cl">22</div>
+                <div id="min" class="col-4 cl">58</div>
+                <div id="sec" class="col-4 cl">58</div>
+            </div>
+            <div class="row blur">
+                <div id="hrs" class="col-4 cl">23</div>
+                <div id="min" class="col-4 cl">59</div>
+                <div id="sec" class="col-4 cl">59</div>
+            </div>
+    
+            <div class="row">
+                <div id="hrs" class="col-4 cl time-hr">00</div>
+                <div id="min" class="col-4 cl time-min">00</div>
+                <div id="sec" class="col-4 cl time-sec">00</div>
+            </div>
+    
+            <div class="row blur">
+                <div id="hrs" class="col-4 cl">01</div>
+                <div id="min" class="col-4 cl">01</div>
+                <div id="sec" class="col-4 cl">01</div>
+            </div>
+            <div class="row blur">
+                <div id="hrs" class="col-4 cl">02</div>
+                <div id="min" class="col-4 cl">02</div>
+                <div id="sec" class="col-4 cl">02</div>
+            </div>
+
+            <div class="row btns">
+                <div id="btn1plus" class="col-4">+</div>
+                <div id="btn2plus" class="col-4">+</div>
+                <div id="btn3plus" class="col-4">+</div>
+            </div>
+    
+            <div id="start" class="container f-s-2rem b-f b-g-w"><img class="run-icon" src="https://img.icons8.com/color/2x/start-skin-type-3.png" alt=""></div>
+        </div>
+
+    
+        <div id="start-timer" class="container-fluid hide m-t-30px" style="background: url(./Images/bg.jfif);">
+            <div class="container start-timer-dim m-t-20px border-white border-rad-30px" style="background-color: black;">
+                <div class="circle m-t-30px">
+                    <div class="row flex pos f-s-2rem">
+                        <div id="hrs-2" class="col-3 cl">00</div>:
+                        <div id="min-2" class="col-3 cl">00</div>:
+                        <div id="sec-2" class="col-3 cl">00</div>
+                    </div>
+                </div>
+                <div id="stop" class="container f-s-2rem b-f b-g-w m-t-30px"><img class="run-icon" src="https://img.icons8.com/color/2x/start-skin-type-3.png" alt=""></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="hide-clock" class="in-body">
+        <div id="container">
+            <div id="center"></div>
+            <div id="hour">
+                <img src="./Images/hour hand.png" alt="">
+            </div>
+            <div id="minute">
+                <img src="./Images/minute hand.png" alt="">
+            </div>
+            <div id="seconds">
+                <img src="./Images/minute hand.png" alt="">
+            </div>
+        </div>
+        <div id="digital">
+            <span id="date"></span>th of <span id="month"></span>
+            <span id="year"></span><br>
+            <span id="day"></span>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="stopwatch.js"></script>
+    <script src="clock.js"></script>
+</body>
+</html>
